@@ -1,11 +1,13 @@
-import React from 'react';
-import { Card, Accordion } from '@themesberg/react-bootstrap';
+import React, {useState} from 'react';
+import { Button, Card, Accordion } from '@themesberg/react-bootstrap';
 
 export default (props) => {
   const { defaultKey, data = [], className = "" } = props;
 
   const AccordionItem = (item) => {
     const { eventKey, title, description } = item;
+    const [showDefault, setShowDefault] = useState(true);
+    const handleCloseDefault = () => setShowDefault(false);
 
     return (
       <Accordion.Item eventKey={eventKey}>
@@ -13,7 +15,9 @@ export default (props) => {
           <span className="h6 mb-0 fw-bold">
             {title}
           </span>
+          {/* <Button variant="close" size="xs" onClick={handleCloseDefault} /> */}
         </Accordion.Button>
+        
         <Accordion.Body>
           <Card.Body className="py-2 px-0">
             <Card.Text className="mb-0">

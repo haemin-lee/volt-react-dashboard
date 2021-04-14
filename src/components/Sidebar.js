@@ -69,15 +69,15 @@ export default (props = {}) => {
 
   return (
     <>
-      <Navbar expand={false} collapseOnSelect variant="dark" className="navbar-theme-primary px-4 d-md-none">
+      {/* <Navbar expand={false} collapseOnSelect variant="dark" className="navbar-theme-primary px-4 d-md-none">
         <Navbar.Brand className="me-lg-5" as={Link} to={Routes.DashboardOverview.path}>
           <Image src={ReactHero} className="navbar-brand-light" />
         </Navbar.Brand>
         <Navbar.Toggle as={Button} aria-controls="main-navbar" onClick={onCollapse}>
           <span className="navbar-toggler-icon" />
         </Navbar.Toggle>
-      </Navbar>
-      <CSSTransition timeout={300} in={show} classNames="sidebar-transition">
+      </Navbar> */}
+      {/* <CSSTransition timeout={300} in={show} classNames="sidebar-transition">
         <SimpleBar className={`collapse ${showClass} sidebar d-md-block bg-primary text-white`}>
           <div className="sidebar-inner px-4 pt-3">
             <div className="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -91,13 +91,13 @@ export default (props = {}) => {
                     <FontAwesomeIcon icon={faSignOutAlt} className="me-2" /> Sign Out
                   </Button>
                 </div>
-              </div>
-              <Nav.Link className="collapse-close d-md-none" onClick={onCollapse}>
+              </div> */}
+              {/* <Nav.Link className="collapse-close d-md-none" onClick={onCollapse}>
                 <FontAwesomeIcon icon={faTimes} />
-              </Nav.Link>
-            </div>
-            <Nav className="flex-column pt-3 pt-md-0">
-              <NavItem title="499 Project" link={Routes.Presentation.path} image={ReactHero} />
+              </Nav.Link> */}
+            {/* </div> */}
+            {/* <Nav className="flex-column pt-3 pt-md-0"> */}
+              {/* <NavItem title="499 Project" link={Routes.Presentation.path} image={ReactHero} /> */}
 
               {/* <NavItem title="Overview" link={Routes.DashboardOverview.path} icon={faChartPie} />
               <NavItem title="Transactions" icon={faHandHoldingUsd} link={Routes.Transactions.path} />
@@ -119,7 +119,7 @@ export default (props = {}) => {
 
               {/* <NavItem external title="Plugins" link="https://demo.themesberg.com/volt-pro-react/#/plugins/charts" target="_blank" badgeText="Pro" icon={faChartPie} /> */}
 
-              <Dropdown.Divider className="my-3 border-indigo" />
+              {/* <Dropdown.Divider className="my-3 border-indigo" /> */}
 
               {/* <CollapsableNavItem eventKey="documentation/" title="Getting Started" icon={faBook}>
                 <NavItem title="Overview" link={Routes.DocsOverview.path} />
@@ -153,10 +153,10 @@ export default (props = {}) => {
 
               {/* <NavItem external title="Themesberg" link="https://themesberg.com" target="_blank" image={ThemesbergLogo} /> */}
 
-            </Nav>
-          </div>
-        </SimpleBar>
-      </CSSTransition>
+            {/* </Nav> */}
+          {/* </div> */}
+        {/* </SimpleBar> */}
+      {/* </CSSTransition> */}
     </>
   );
 };

@@ -99,15 +99,15 @@ export default (props = {}) => {
             <Nav className="flex-column pt-3 pt-md-0">
               <NavItem title="499 Project" link={Routes.Presentation.path} image={ReactHero} />
 
-              <NavItem title="Overview" link={Routes.DashboardOverview.path} icon={faChartPie} />
+              {/* <NavItem title="Overview" link={Routes.DashboardOverview.path} icon={faChartPie} />
               <NavItem title="Transactions" icon={faHandHoldingUsd} link={Routes.Transactions.path} />
-              <NavItem title="Settings" icon={faCog} link={Routes.Settings.path} />
+              <NavItem title="Settings" icon={faCog} link={Routes.Settings.path} /> */}
 
-              <CollapsableNavItem eventKey="tables/" title="Tables" icon={faTable}>
+              {/* <CollapsableNavItem eventKey="tables/" title="Tables" icon={faTable}>
                 <NavItem title="Bootstrap Table" link={Routes.BootstrapTables.path} />
-              </CollapsableNavItem>
+              </CollapsableNavItem> */}
 
-              <CollapsableNavItem eventKey="examples/" title="Page Examples" icon={faFileAlt}>
+              {/* <CollapsableNavItem eventKey="examples/" title="Page Examples" icon={faFileAlt}>
                 <NavItem title="Sign In" link={Routes.Signin.path} />
                 <NavItem title="Sign Up" link={Routes.Signup.path} />
                 <NavItem title="Forgot password" link={Routes.ForgotPassword.path} />
@@ -115,7 +115,7 @@ export default (props = {}) => {
                 <NavItem title="Lock" link={Routes.Lock.path} />
                 <NavItem title="404 Not Found" link={Routes.NotFound.path} />
                 <NavItem title="500 Server Error" link={Routes.ServerError.path} />
-              </CollapsableNavItem>
+              </CollapsableNavItem> */}
 
               {/* <NavItem external title="Plugins" link="https://demo.themesberg.com/volt-pro-react/#/plugins/charts" target="_blank" badgeText="Pro" icon={faChartPie} /> */}
 
@@ -130,7 +130,8 @@ export default (props = {}) => {
                 <NavItem title="Build Tools" link={Routes.DocsBuild.path} />
                 <NavItem title="Changelog" link={Routes.DocsChangelog.path} />
               </CollapsableNavItem> */}
-              <CollapsableNavItem eventKey="components/" title="Components" icon={faBoxOpen}>
+
+              {/* <CollapsableNavItem eventKey="components/" title="Components" icon={faBoxOpen}>
                 <NavItem title="Accordion" link={Routes.Accordions.path} />
                 <NavItem title="Alerts" link={Routes.Alerts.path} />
                 <NavItem title="Badges" link={Routes.Badges.path} />
@@ -148,7 +149,8 @@ export default (props = {}) => {
                 <NavItem title="Tabs" link={Routes.Tabs.path} />
                 <NavItem title="Toasts" link={Routes.Toasts.path} />
                 <NavItem title="Tooltips" link={Routes.Tooltips.path} />
-              </CollapsableNavItem>
+              </CollapsableNavItem> */}
+
               {/* <NavItem external title="Themesberg" link="https://themesberg.com" target="_blank" image={ThemesbergLogo} /> */}
 
             </Nav>

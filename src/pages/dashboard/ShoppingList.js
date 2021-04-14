@@ -2,26 +2,11 @@ import React from 'react';
 import { Row, Col } from "react-bootstrap";
 import { GroceryItem } from './GroceryItem';
 
-
-// const ShoppingCartButton = () => {
-//     const shoppingCartStyle = {
-//         display:"inline", 
-//         color: "black", 
-//         float: 'right', 
-//         marginRight:"2rem"
-//     }
-
-//     return(
-//         <div style={shoppingCartStyle} >
-//             <AiOutlineShoppingCart/>
-//         </div>
-//     )
-// }
-
 const ShoppingList = (props) => {
     const {shoppingList, setShoppingList} = props;
 
     const deleteShoppingItem = (foodName, e) => {
+        console.log(`shoppinglist: ${shoppingList}`)
         console.log(`deleting item: ${foodName}`)
 
         e.stopPropagation();

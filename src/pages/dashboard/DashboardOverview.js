@@ -1,45 +1,25 @@
-
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faCashRegister, faChartLine, faCloudUploadAlt, faPlus, faRocket, faTasks, faUserShield } from '@fortawesome/free-solid-svg-icons';
-import { Card, Toast, Col, Row, Button, Modal, Form, InputGroup, Dropdown, ButtonGroup } from '@themesberg/react-bootstrap';
-import { faBootstrap } from '@fortawesome/free-brands-svg-icons';
-
+import { Row, Col } from "react-bootstrap";
 import { ApproveModal } from "../components/ApproveModal"
-import { GroceryItem } from "./GroceryItem"
-
-import { customStyles } from './Styles'
-
 import ExportViaEmail from './ExportViaEmail';
-import ModalFoodItem from './ModalFoodItem';
-import FoodRecalls from './FoodRecalls';
 import SearchBar from './SearchBar'
 import ShoppingList from "./ShoppingList";
-
 import axios from "axios";
-// import Modal from "react-modal";
 
 export default () => {
 
-    
-  const [showDefault, setShowDefault] = useState(false);
-  const handleClose = () => setShowDefault(false);
-
   const [showToastDefault, setShowToastDefault] = useState(true);
-  const toggleDefaultToast = () => setShowToastDefault(!showToastDefault);
 
   const [shoppingList, setShoppingList] = useState([]); // items in shopping list
   const [recall, setRecall] = useState([]);
   const [currInput, setCurrInput] = useState("");
   const [currItem, setCurrItem] = useState([""]); // input the user typed into search box
   const [open, setOpen] = useState(false); // for recalls
-  const [modalIsOpen, setIsOpen] = useState(false);
-
+  
+  const [modalIsOpen, setIsOpen] = useState(false); // for approval modal
   function openModal() { setIsOpen(true); }
   function closeModal() { setIsOpen(false); }
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-  }
+
 
   // for recalls
   useEffect(() => {
@@ -82,7 +62,6 @@ export default () => {
             closeModal={closeModal}
           />
 
-      {/* GROCERY ITEMS - TOAST */}
       <Col xs={12}>
   
         {/* display all approved items in shopping list */}

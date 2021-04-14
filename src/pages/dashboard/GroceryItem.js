@@ -14,7 +14,7 @@ export const GroceryItem = (props) => {
 
     const deleteItem = (foodName, e) => {
         deleteShoppingItem(foodName, e);
-        toggleDefaultToast();
+        // toggleDefaultToast();
     }
 
     return (

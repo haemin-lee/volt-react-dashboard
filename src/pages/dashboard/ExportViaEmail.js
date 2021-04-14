@@ -41,7 +41,7 @@ const ExportViaEmail = (props) => {
 
 
     return(
-        <ButtonGroup>
+        <ButtonGroup style={{paddingBottom: '1.25rem'}}>
           <Button 
             variant="outline-primary" 
             size="sm" 

@@ -70,8 +70,9 @@ const SearchBar = (props) => {
               onSubmit={(e) => {
                 addItem(e);
               }}
+              style={{display: 'inline-block', width: '100%'}}
             >
-              <div class="form-group">
+              <div style={{float:'left', paddingRight: '0.5rem'}} class="form-group">
                 <Autocomplete
                   id="combo-box-demo"
                   freeSolo
@@ -91,10 +92,13 @@ const SearchBar = (props) => {
                   )}
                 />
               </div>
-              <button type="submit" class="btn btn-primary">
-                Add Item
-              </button>
-            </Form>
+              <div style={{float: 'left'}} >
+                <button type="submit" class="btn btn-primary">
+                  Add Item
+                </button>
+              </div>
+              
+          </Form>
     )
 
 }

@@ -34,44 +34,42 @@ export default () => {
 
   return (
     <>
-      <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
-      
-      {/* search box with 'add item' submit button */}
-        <SearchBar
-              currInput={currInput} 
-              setCurrInput={setCurrInput} 
-              shoppingList={shoppingList} 
-              setCurrItem={setCurrItem} 
-              recall={recall} 
-              openModal={openModal} />
-        {/* allow users to email shopping list */}
-        <ExportViaEmail shoppingList={shoppingList} />
+      <div xs={12} className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+        {/* search box with 'add item' submit button */}
+        <Row xs={12}>
+          <SearchBar
+                  currInput={currInput} 
+                  setCurrInput={setCurrInput} 
+                  shoppingList={shoppingList} 
+                  setCurrItem={setCurrItem} 
+                  recall={recall} 
+                  openModal={openModal} />
+        </Row>
       </div>
 
-      <Row className="justify-content-md-center">
+      {/* allow users to email shopping list */}
+      <ExportViaEmail shoppingList={shoppingList} />
+      
+      {/* APPROVAL MODAL */}
+      <ApproveModal
+        showDefault={modalIsOpen}
+        setShowDefault={setIsOpen}
+        currItem={currItem}
+        setCurrItem={setCurrItem}
+        shoppingList={shoppingList}
+        setShoppingList={setShoppingList}
+        closeModal={closeModal}
+      />
 
-
-        {/* APPROVAL MODAL */}
-        <ApproveModal
-            showDefault={modalIsOpen}
-            setShowDefault={setIsOpen}
-            currItem={currItem}
-            setCurrItem={setCurrItem}
+      <Row xs={12} className="justify-content-md-center">
+        <Col xs={12}>
+    
+          {/* display all approved items in shopping list */}
+          <ShoppingList
             shoppingList={shoppingList}
             setShoppingList={setShoppingList}
-            closeModal={closeModal}
           />
-
-      <Col xs={12}>
-  
-        {/* display all approved items in shopping list */}
-        <ShoppingList
-          shoppingList={shoppingList}
-          setShoppingList={setShoppingList}
-        />
-      </Col>
-
-
+        </Col>
       </Row>
     </>
   );

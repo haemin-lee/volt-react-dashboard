@@ -29,7 +29,8 @@ const ShoppingList = (props) => {
 
         return(
             <GroceryItem 
-                foodName={shoppingList[i].name} 
+                foodName={shoppingList[i].name}
+                violationsList={shoppingList[i].violationsList}
                 deleteShoppingItem={deleteShoppingItem}
                 violationType={violationType} />
         )

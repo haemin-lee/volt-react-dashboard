@@ -4,15 +4,18 @@ const ModalFoodItem = (props) => {
 
     const { currItem, setCurrItem, shoppingList, setShoppingList, closeModal } = props;
 
-    // display warning (food rule violations or recalled item)
+    // display warning on modal popup
     function findWarning() {
-        // food rule violation: more than 5 ingredients found
+        // food rule violation: recalled food item
         if (currItem[0].recall) {
           return <div>Recall Found</div>;
         }
+        // food rule violation: more than 5 ingredients found
         if (currItem[0].ingredientNumber > 5) {
           return <span>Food Rule Violation: More than 5 ingredients found</span>;
         }
+
+        // TODO: filter through currItem[0].violationsList
 
         // recalled food item found
         console.log(`recall: ${currItem[0].recall}`);
@@ -24,8 +27,7 @@ const ModalFoodItem = (props) => {
               <div className="approveBody">
                 <div
                   className="warningLabel"
-                  style={{ color: "red", fontStyle: "italic" }}
-                >
+                  style={{ color: "red", fontStyle: "italic" }} >
                   {findWarning()}
                 </div>
                 <div>

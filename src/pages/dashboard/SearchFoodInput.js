@@ -24,7 +24,13 @@ const SearchFoodInput = (props) => {
       if (currInput === recall[i]["product_description"]) {
         console.log("yes");
         found = 1;
-        let newFoodVar = new Food(recall[i]["product_description"],"24",1,0,"null for now");
+        let newFoodVar = new Food(
+          recall[i]["product_description"],
+          "24",
+          1,
+          0,
+          "null for now",
+          []);
         let empty = [];
         empty.push(newFoodVar);
         setCurrItem(empty);
@@ -32,7 +38,7 @@ const SearchFoodInput = (props) => {
       }
     }
 
-    // make axios POST request to get food data
+    // make axios POST request to get food data (ingredients & list of food rule violations)
     if (found === 0) {
       console.log(`GET request with currInput ${currInput}`);
       axios.post(`https://127.0.0.1:5000/get-num-ingredients`, {
@@ -41,7 +47,14 @@ const SearchFoodInput = (props) => {
         .then((response) => {
           console.log(response.data);
           let responseVar = response.data;
-          let newFoodVar = new Food(responseVar["food_item"], responseVar["num_ingredients"], 0, 0, responseVar["ingredients"]);
+          let newFoodVar = new Food(
+                responseVar["food_item"],
+                responseVar["num_ingredients"],
+                0,
+                0,
+                responseVar["ingredients"],
+                responseVar["violations_list"]
+              );
           let empty = [];
           empty.push(newFoodVar);
           setCurrItem(empty);

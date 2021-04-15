@@ -28,7 +28,8 @@ const SearchBar = (props) => {
               "24",
               1,
               0,
-              "null for now"
+              "null for now",
+              []
             );
             let empty = [];
             empty.push(newFoodVar);
@@ -51,7 +52,8 @@ const SearchBar = (props) => {
                 responseVar["num_ingredients"],
                 0,
                 0,
-                responseVar["ingredients"]
+                responseVar["ingredients"],
+                responseVar["violations_list"]
               );
               let empty = [];
               empty.push(newFoodVar);

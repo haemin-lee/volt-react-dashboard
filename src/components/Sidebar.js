@@ -69,14 +69,14 @@ export default (props = {}) => {
 
   return (
     <>
-      {/* <Navbar expand={false} collapseOnSelect variant="dark" className="navbar-theme-primary px-4 d-md-none">
-        <Navbar.Brand className="me-lg-5" as={Link} to={Routes.DashboardOverview.path}>
-          <Image src={ReactHero} className="navbar-brand-light" />
+      {/* <Navbar variant="dark" className="navbar-theme-primary px-4 d-md-none"> */}
+      <Navbar variant="light" >
+        {/* <Navbar.Brand className="me-lg-12"> */}
+        <Navbar.Brand>
+          <Image src={ReactHero} className="navbar-brand-dark" />
+          <h1 style={{color: 'darkseagreen'}}>freshr.</h1>
         </Navbar.Brand>
-        <Navbar.Toggle as={Button} aria-controls="main-navbar" onClick={onCollapse}>
-          <span className="navbar-toggler-icon" />
-        </Navbar.Toggle>
-      </Navbar> */}
+      </Navbar>
       {/* <CSSTransition timeout={300} in={show} classNames="sidebar-transition">
         <SimpleBar className={`collapse ${showClass} sidebar d-md-block bg-primary text-white`}>
           <div className="sidebar-inner px-4 pt-3">

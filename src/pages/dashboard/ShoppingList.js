@@ -48,7 +48,7 @@ const ShoppingList = (props) => {
     return(
         <>
             <Row className="shoppingListHeader">
-                <Col xs={12}>
+                <Col xs={12} lg={12}>
                     <h4>Shopping List</h4>
                 </Col>
             </Row>

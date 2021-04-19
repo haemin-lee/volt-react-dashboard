@@ -32,8 +32,6 @@ export const GroceryItem = (props) => {
 
     const { foodName, violationsList, deleteShoppingItem, violationType } = props;
 
-    console.log(`violation: ${violationType}`)
-
     const deleteItem = (foodName, e) => {
         deleteShoppingItem(foodName, e);
     }
@@ -41,10 +39,14 @@ export const GroceryItem = (props) => {
     function displayViolationCode(violationType) {
         var codeArr = [];
 
-        for(var i = 0; i < violationsList.length; i++){
-            var violation = violationsList[i]
-            console.log(`violation: ${violation.name}`)
+        for(let i = 0; i < violationsList.length; i++){
+            let violation = violationsList[i]
 
+            // necessary: for some reason, when list is empty it will have a Null object with length 1
+            if(violation === null){
+                break;
+            }
+            
             if(violation.name === "VIOLATION_PRONUNCIATION"){
                 codeArr.push( <ViolationDot warningText={VIOLATION_PRONUNCIATION} color={"Coral"} /> )
             }

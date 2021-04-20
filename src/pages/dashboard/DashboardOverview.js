@@ -5,6 +5,8 @@ import ExportViaEmail from './ExportViaEmail';
 import SearchBar from './SearchBar'
 import ShoppingList from "./ShoppingList";
 import axios from "axios";
+import Legend from './Legend';
+
 
 export default () => {
 
@@ -49,6 +51,9 @@ export default () => {
 
       {/* allow users to email shopping list */}
       <ExportViaEmail shoppingList={shoppingList} />
+
+      {/* legend/key for violations */}
+      <Legend />
       
       {/* APPROVAL MODAL */}
       <ApproveModal

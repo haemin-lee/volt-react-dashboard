@@ -12,7 +12,7 @@ import {
     VIOLATION_ADDED_SUGAR
 } from './constants'
 
-const ViolationDot = (props) => {
+export const ViolationDot = (props) => {
     const { warningText, color } = props;
     return(
         <OverlayTrigger 

@@ -41,7 +41,7 @@ const SearchFoodInput = (props) => {
     // make axios POST request to get food data (ingredients & list of food rule violations)
     if (found === 0) {
       console.log(`GET request with currInput ${currInput}`);
-      axios.post(`https://127.0.0.1:5000/get-num-ingredients`, {
+      axios.post(`https://food-safety-backend.herokuapp.com/get-num-ingredients`, {
           food_item: currInput,
         })
         .then((response) => {

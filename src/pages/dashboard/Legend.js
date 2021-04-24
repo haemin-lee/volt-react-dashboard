@@ -21,7 +21,7 @@ const LegendDot = (props) => {
 const Legend = () => {
     return(
         <OverlayTrigger
-        placement="right"
+        placement="bottom"
         trigger="click"
         overlay={
           <Popover>

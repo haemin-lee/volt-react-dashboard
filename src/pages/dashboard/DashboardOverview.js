@@ -26,10 +26,11 @@ export default () => {
   // for recalls
   useEffect(() => {
     // Update the document title using the browser API
-    axios.post(`https://127.0.0.1:5000/get-food-recalls`).then((response) => {
-      console.log(response.data);
-      setRecall(response.data["food_recall_list"]);
-    });
+    // axios.post(`https://127.0.0.1:5000/get-food-recalls`).then((response) => {
+    //   console.log(response.data);
+    //   setRecall(response.data["food_recall_list"]);
+    // });
+    setRecall([]);
   }, []);
 
   
@@ -50,7 +51,7 @@ export default () => {
       </div>
 
       {/* allow users to email shopping list */}
-      <ExportViaEmail shoppingList={shoppingList} />
+      {/* <ExportViaEmail shoppingList={shoppingList} /> */}
 
       {/* legend/key for violations */}
       <Legend />

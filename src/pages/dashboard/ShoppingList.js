@@ -54,7 +54,7 @@ const ShoppingList = (props) => {
             </Row>
 
             <Row className="shoppingListItems">
-                <Col xs={6}>
+                <Col xs={12} lg={12}>
                     {returnShoppingList()}
                 </Col>
             </Row>

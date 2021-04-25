@@ -46,7 +46,7 @@ const SearchBar = (props) => {
     if (found === 0) {
       console.log(`GET request with currInput ${currInput}`);
       axios
-        .post(`https://food-safety-app.herokuapp.com/get-num-ingredients`, {
+        .post(`https://food-safety-backend.herokuapp.com/get-num-ingredients`, {
           food_item: currInput,
         })
         .then((response) => {

@@ -51,7 +51,7 @@ export default () => {
       </div>
 
       {/* allow users to email shopping list */}
-      <ExportViaEmail shoppingList={shoppingList} />
+      {/* <ExportViaEmail shoppingList={shoppingList} /> */}
 
       {/* legend/key for violations */}
       <Legend />

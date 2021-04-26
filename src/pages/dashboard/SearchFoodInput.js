@@ -72,10 +72,11 @@ const SearchFoodInput = (props) => {
     return(
         <div className="d-flex justify-content-between w-50">
           <div className="d-flex align-items-center">
+          
             <Form className="navbar-search">
               <Form.Group id="topbarSearch">
                 <InputGroup className="input-group-merge search-bar">
-                  {/* <InputGroup.Text><FontAwesomeIcon icon={faSearch} /></InputGroup.Text> */}
+                  
 
                   <Autocomplete
                     id="combo-box-demo"
@@ -92,7 +93,7 @@ const SearchFoodInput = (props) => {
                     getOptionLabel={(option) => option.name}
                     style={{ width: 300 }}
                     renderInput={(params) => (
-                      <TextField {...params} variant="outlined" />
+                      <TextField {...params} label="Search for items to add to your grocery list!" variant="outlined" />
                     )}
                   />
                   <Form.Control type="text" placeholder="Search" />

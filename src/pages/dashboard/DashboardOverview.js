@@ -40,6 +40,7 @@ export default () => {
       <div xs={12} className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         {/* search box with 'add item' submit button */}
         <Row xs={12}>
+          <div>Search for items to add to your grocery list by selecting the item from the dropdown and clicking 'Add Item'</div>
           <SearchBar
                   currInput={currInput} 
                   setCurrInput={setCurrInput} 

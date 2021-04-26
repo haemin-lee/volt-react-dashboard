@@ -18,7 +18,7 @@ const ModalFoodItem = (props) => {
         try{
           let warnings = []
           if (currItem[0].ingredientNumber > 5) {
-            warnings.push(<span>Food Rule Violation: More than 5 ingredients found</span>);
+            warnings.push(<span>WARNING: More than 5 ingredients found</span>);
           }
   
           let violations = currItem[0].violationsList;
@@ -30,7 +30,7 @@ const ModalFoodItem = (props) => {
             
             let violation = violations[i]
             if(violation === null){
-                break;
+                continue;
             }
 
             if(violation.name === "VIOLATION_PRONUNCIATION"){

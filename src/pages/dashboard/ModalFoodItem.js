@@ -28,8 +28,8 @@ const ModalFoodItem = (props) => {
 
           for(let i = 0; i < violations.length; i++){
             
-            let violationType = violations[i]
-            if(violationType === null){
+            let violation = violations[i]
+            if(violation === null){
                 break;
             }
 

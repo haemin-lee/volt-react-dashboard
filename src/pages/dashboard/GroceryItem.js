@@ -38,6 +38,9 @@ export const GroceryItem = (props) => {
 
     function displayViolationCode(violationType) {
         var codeArr = [];
+        if(violationsList == null || violationsList === undefined || typeof violationsList === "undefined"){
+            return;
+        }
 
         for(let i = 0; i < violationsList.length; i++){
             let violation = violationsList[i]

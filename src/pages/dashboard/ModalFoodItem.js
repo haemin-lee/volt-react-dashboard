@@ -21,6 +21,29 @@ const ModalFoodItem = (props) => {
         console.log(`recall: ${currItem[0].recall}`);
     }
 
+    function returnNumIngredients(){
+      console.log(`test: ${currItem[0].ingredientListStr}`)
+      if(currItem[0].ingredientNumber == null|| currItem[0].ingredientNumber === undefined || typeof currItem[0].ingredientNumber === "undefined")
+      {
+        return "None Found"
+      }
+      else
+      {
+        return currItem[0].ingredientNumber
+      }
+    }
+
+    function returnIngredients(){
+      if(currItem[0].ingredientListStr == null|| currItem[0].ingredientListStr === undefined || typeof currItem[0].ingredientListStr === "undefined")
+      {
+        return "None Found"
+      }
+      else
+      {
+        return currItem[0].ingredientListStr
+      }
+    }
+
     return(
             <>
               <h5>{currItem[0].name}</h5>
@@ -32,11 +55,13 @@ const ModalFoodItem = (props) => {
                 </div>
                 <div>
                   <strong>Number of ingredients: </strong>{" "}
-                  {currItem[0].ingredientNumber}
+                  {/* {currItem[0].ingredientNumber} */}
+                  {returnNumIngredients()}
                 </div>
                 <div>
                   <strong>Ingredient list: </strong>
-                  {currItem[0].ingredientListStr}
+                  {/* {currItem[0].ingredientListStr} */}
+                  {returnIngredients()}
                 </div>
               </div>
             </>

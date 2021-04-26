@@ -15,7 +15,7 @@ export default () => (
               <p className="fs-5 fw-light">This guide will help you get started with Volt React Dashboard</p>
 
               <p>
-                <b>Volt React Dashboard</b> is built on top of <Card.Link href="https://react-bootstrap.github.io/" target="_blank">React Bootstrap</Card.Link> using <a href="https://github.com/facebook/create-react-app/" target="_blank" rel="noopener noreferrer">Create React App</a>.
+                <b>freshr</b> is built on top of <Card.Link href="https://react-bootstrap.github.io/" target="_blank">React Bootstrap</Card.Link> using <a href="https://github.com/facebook/create-react-app/" target="_blank" rel="noopener noreferrer">Create React App</a>.
               </p>
               
               <p>Please follow these steps to install the required technologies:</p>

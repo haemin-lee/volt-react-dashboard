@@ -19,6 +19,8 @@ const ModalFoodItem = (props) => {
 
   function wrapper(violations) {
     let warnings2 = [];
+
+    console.log(`violations list: ${violations}`)
     for (let i = 0; i < violations.length; i++) {
       let violation = violations[i];
       if (violation === null) {
@@ -68,7 +70,7 @@ const ModalFoodItem = (props) => {
       }
 
       warnings.push(<div>{wrapper(violations)}</div>);
-      return warnings;
+      return <div>{warnings}</div>;
     } catch (err) {
       console.log(err);
       return;

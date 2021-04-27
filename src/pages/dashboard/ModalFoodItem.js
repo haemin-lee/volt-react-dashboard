@@ -17,7 +17,7 @@ const ModalFoodItem = (props) => {
     closeModal,
   } = props;
 
-  function wrapper(violations) {F
+  function wrapper(violations) {
     let warnings2 = [];
 
     console.log(`violations list: ${violations}`)

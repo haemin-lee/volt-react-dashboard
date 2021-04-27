@@ -22,7 +22,7 @@ const ModalFoodItem = (props) => {
     try {
       let warnings = [];
       if (currItem[0].ingredientNumber > 5) {
-        warnings.push(<span>WARNING: More than 5 ingredients found</span>);
+        warnings.push(<div>WARNING: More than 5 ingredients found</div>);
       }
 
       let violations = currItem[0].violationsList;
@@ -43,24 +43,24 @@ const ModalFoodItem = (props) => {
         }
 
         if (violation.name === "VIOLATION_PRONUNCIATION") {
-          warnings.push(<span>WARNING: {VIOLATION_PRONUNCIATION}</span>);
+          warnings.push(<div>WARNING: {VIOLATION_PRONUNCIATION}</div>);
         }
         if (violation.name === "VIOLATION_NO_ORDINARY_INGREDIENTS") {
           warnings.push(
-            <span>WARNING: {VIOLATION_NO_ORDINARY_INGREDIENTS}</span>
+            <div>WARNING: {VIOLATION_NO_ORDINARY_INGREDIENTS}</div>
           );
         }
         if (violation.name === "VIOLATION_HEALTH_CLAIM_WORDS") {
-          warnings.push(<span>WARNING: {VIOLATION_HEALTH_CLAIM_WORDS}</span>);
+          warnings.push(<div>WARNING: {VIOLATION_HEALTH_CLAIM_WORDS}</div>);
         }
         if (violation.name === "VIOLATION_UNIVERSAL_NAME") {
-          warnings.push(<span>WARNING: {VIOLATION_UNIVERSAL_NAME}</span>);
+          warnings.push(<div>WARNING: {VIOLATION_UNIVERSAL_NAME}</div>);
         }
         if (violation.name === "VIOLATION_AVOID_HFCS") {
-          warnings.push(<span>WARNING: {VIOLATION_AVOID_HFCS}</span>);
+          warnings.push(<div>WARNING: {VIOLATION_AVOID_HFCS}</div>);
         }
         if (violation.name === "VIOLATION_ADDED_SUGAR") {
-          warnings.push(<span>WARNING: {VIOLATION_ADDED_SUGAR}</span>);
+          warnings.push(<div>WARNING: {VIOLATION_ADDED_SUGAR}</div>);
         }
       }
 

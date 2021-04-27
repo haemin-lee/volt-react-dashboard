@@ -17,39 +17,6 @@ const ModalFoodItem = (props) => {
     closeModal,
   } = props;
 
-  function wrapper(violations) {
-    let warnings2 = [];
-    for (let i = 0; i < violations.length; i++) {
-      let violation = violations[i];
-      if (violation === null) {
-        continue;
-      }
-
-      if (violation.name === "VIOLATION_PRONUNCIATION") {
-        warnings2.push(<span>WARNING: {VIOLATION_PRONUNCIATION}</span>);
-      }
-      if (violation.name === "VIOLATION_NO_ORDINARY_INGREDIENTS") {
-        warnings2.push(
-          <span>WARNING: {VIOLATION_NO_ORDINARY_INGREDIENTS}</span>
-        );
-      }
-      if (violation.name === "VIOLATION_HEALTH_CLAIM_WORDS") {
-        warnings2.push(<span>WARNING: {VIOLATION_HEALTH_CLAIM_WORDS}</span>);
-      }
-      if (violation.name === "VIOLATION_UNIVERSAL_NAME") {
-        warnings2.push(<span>WARNING: {VIOLATION_UNIVERSAL_NAME}</span>);
-      }
-      if (violation.name === "VIOLATION_AVOID_HFCS") {
-        warnings2.push(<span>WARNING: {VIOLATION_AVOID_HFCS}</span>);
-      }
-      if (violation.name === "VIOLATION_ADDED_SUGAR") {
-        warnings2.push(<span>WARNING: {VIOLATION_ADDED_SUGAR}</span>);
-      }
-
-      return warnings2;
-    }
-  }
-
   // display warning on modal popup
   function findWarning() {
     try {
@@ -59,6 +26,8 @@ const ModalFoodItem = (props) => {
       }
 
       let violations = currItem[0].violationsList;
+      console.log("ALL VIOLATIONS");
+      console.log(violations);
       if (
         violations == null ||
         violations === undefined ||
@@ -67,7 +36,34 @@ const ModalFoodItem = (props) => {
         return;
       }
 
-      warnings = warnings.concat(wrapper(violations));
+      for (let i = 0; i < violations.length; i++) {
+        let violation = violations[i];
+        if (violation === null) {
+          continue;
+        }
+
+        if (violation.name === "VIOLATION_PRONUNCIATION") {
+          warnings.push(<span>WARNING: {VIOLATION_PRONUNCIATION}</span>);
+        }
+        if (violation.name === "VIOLATION_NO_ORDINARY_INGREDIENTS") {
+          warnings.push(
+            <span>WARNING: {VIOLATION_NO_ORDINARY_INGREDIENTS}</span>
+          );
+        }
+        if (violation.name === "VIOLATION_HEALTH_CLAIM_WORDS") {
+          warnings.push(<span>WARNING: {VIOLATION_HEALTH_CLAIM_WORDS}</span>);
+        }
+        if (violation.name === "VIOLATION_UNIVERSAL_NAME") {
+          warnings.push(<span>WARNING: {VIOLATION_UNIVERSAL_NAME}</span>);
+        }
+        if (violation.name === "VIOLATION_AVOID_HFCS") {
+          warnings.push(<span>WARNING: {VIOLATION_AVOID_HFCS}</span>);
+        }
+        if (violation.name === "VIOLATION_ADDED_SUGAR") {
+          warnings.push(<span>WARNING: {VIOLATION_ADDED_SUGAR}</span>);
+        }
+      }
+
       console.log(warnings);
       return warnings;
     } catch (err) {

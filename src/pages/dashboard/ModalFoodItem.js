@@ -67,7 +67,7 @@ const ModalFoodItem = (props) => {
         return;
       }
 
-      warnings.push(<div>{wrapper(violations)}</div>);
+      warnings = warnings.concat(wrapper(violations));
       console.log(warnings);
       return warnings;
     } catch (err) {

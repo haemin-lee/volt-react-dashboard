@@ -17,7 +17,7 @@ const ModalFoodItem = (props) => {
     closeModal,
   } = props;
 
-  function wrapper(violations) {
+  function wrapper(violations) {F
     let warnings2 = [];
 
     console.log(`violations list: ${violations}`)
@@ -26,6 +26,8 @@ const ModalFoodItem = (props) => {
       if (violation === null) {
         continue;
       }
+
+      console.log(`violation name: ${violation.name}`)
 
       if (violation.name === "VIOLATION_PRONUNCIATION") {
         warnings2.push(<span>WARNING: {VIOLATION_PRONUNCIATION}</span>);
